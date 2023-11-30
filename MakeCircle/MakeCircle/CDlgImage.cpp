@@ -103,7 +103,7 @@ void CDlgImage::drawData(CDC* pDC) {
 
 	if (bDrawCircle) {
 	
-		rectOutCirc.SetRect(left, top, right, bottom);
+		rectOutCirc.SetRect(nLeft, nTop, nRight, nBottom);
 
 		pDC->Ellipse(rectOutCirc);
 
@@ -120,12 +120,12 @@ void CDlgImage::drawInnerCircle(CDC* pDC) {
 	CPen* pBluePen = pDC->SelectObject(&bluePen);
 
 	CRect rectCent;
-	rectCent.SetRect(CenterX - 10, CenterY - 10, CenterX + 10, CenterY + 10);
+	rectCent.SetRect(nCenterX - (nInnerDiam*2), nCenterY - (nInnerDiam * 2), nCenterX + (nInnerDiam * 2)0, nCenterY + (nInnerDiam * 2));
 	pDC->Ellipse(rectCent);
-	for (int j = -5; j <= 5; j++) {
+	for (int j = -nInnerDiam; nInnerDiam <= 5; j++) {
 
-		pDC->SetPixel(CenterX, CenterY + j, 0);
-		pDC->SetPixel(CenterX + j, CenterY, 0);
+		pDC->SetPixel(nCenterX, nCenterY + j, 0);
+		pDC->SetPixel(nCenterX + j, nCenterY, 0);
 
 		//pDC->MoveTo(CenterX-5, CenterY);
 		//pDC->LineTo(CenterX+4, CenterY);

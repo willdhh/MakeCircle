@@ -271,12 +271,12 @@ void CMakeCircleDlg::OnBnClickedBtnCircle()
 	int CenterY = nDiam / 2 + top;
 
 	m_pDlgImage->bDrawCircle = TRUE;
-	m_pDlgImage->left = left;
-	m_pDlgImage->right = right;
-	m_pDlgImage->top = top;
-	m_pDlgImage->bottom = bottom;
-	m_pDlgImage->CenterX = CenterX;
-	m_pDlgImage->CenterY = CenterY;
+	m_pDlgImage->nLeft = left;
+	m_pDlgImage->nRight = right;
+	m_pDlgImage->nTop = top;
+	m_pDlgImage->nBottom = bottom;
+	m_pDlgImage->nCenterX = CenterX;
+	m_pDlgImage->nCenterY = CenterY;
 
 	m_pDlgImage->Invalidate();
 	

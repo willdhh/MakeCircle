@@ -16,12 +16,14 @@ public:
 	CImage m_image;
 	BOOL bDrawCircle = FALSE;
 
-	int left=0;
-	int top=0;
-	int right=50;
-	int bottom=50;
-	int CenterX=25;
-	int CenterY=25;
+	int nLeft=0;
+	int nTop=0;
+	int nRight=50;
+	int nBottom=50;
+	int nCenterX=25;
+	int nCenterY=25;
+
+	int nInnerDiam = 5;
 
 // Dialog Data
 #ifdef AFX_DESIGN_TIME
